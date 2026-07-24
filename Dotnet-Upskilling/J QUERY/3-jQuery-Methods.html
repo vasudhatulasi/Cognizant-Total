@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .box
+        {
+            width:100px;
+            height:100px;
+            background:skyblue;
+            margin:10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>jQuery Methods</h1>
+
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="fadeOut">Fade Out</button>
+    <button id="fadeIn">Fade In</button>
+    <button id="toggle">Toggle</button>
+    <button id="chain">Chain</button>
+
+    <div class="box"></div>
+
+    <script>
+        $("#hide").click(function ()
+        {
+            $(".box").hide();
+        });
+
+        $("#show").click(function ()
+        {
+            $(".box").show();
+        });
+
+        $("#fadeOut").click(function ()
+        {
+            $(".box").fadeOut();
+        });
+
+        $("#fadeIn").click(function ()
+        {
+            $(".box").fadeIn();
+        });
+
+        $("#toggle").click(function ()
+        {
+            $(".box").toggle();
+        });
+
+        $("#chain").click(function ()
+        {
+            $(".box")
+                .slideUp()
+                .delay(1000)
+                .slideDown();
+        });
+    </script>
+
+</body>
+</html>

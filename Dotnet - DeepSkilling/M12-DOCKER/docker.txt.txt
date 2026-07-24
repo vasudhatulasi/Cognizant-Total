@@ -1,0 +1,153 @@
+# **Module 12 – Containerization using Docker**
+
+## **Overview:**
+
+This module focuses on an awareness of the most widely used application containerization tool, Docker.
+
+---
+
+## **Learning Objectives:**
+
+After completing this module, learners will be able to:
+
+* Explain the concept and features of Docker
+* List the basic Docker commands
+* Explain the concepts of Docker storage, networking, and orchestration
+
+---
+
+## **Self-Learning (Open-source links):**
+
+---
+
+## **Key Topics**
+
+### **1. Docker Commands**
+
+**Sub-topics:**
+
+* Basic Docker Commands - Run, ps, stop, rm, images, rmi, pull, Append a command, Exec
+
+**Learning Reference Links:**
+
+* [https://www.geeksforgeeks.org/docker-tutorial/](https://www.geeksforgeeks.org/docker-tutorial/)
+
+---
+
+### **2. Docker Run**
+
+**Sub-topics:**
+
+* How to Use the docker run Command
+* Run a Container Under a Specific Name
+* Run a Container in the Background (Detached Mode)
+* Run a Container Interactively
+* Run a Container and Publish Container Ports
+* Run a Docker Container and Remove it Once the Process is Complete
+
+**Learning Reference Links:**
+
+* [https://www.geeksforgeeks.org/docker-tutorial/](https://www.geeksforgeeks.org/docker-tutorial/)
+
+---
+
+### **3. Docker Images**
+
+**Sub-topics:**
+
+* What is a Docker Image?
+* Image Layers
+* Container Layer
+* Parent Image
+* Base Image
+* Docker Manifest
+* Container Registries
+* Container Repositories
+* How to Create a Docker Image
+
+  * Interactive Method
+  * Dockerfile Method
+* Docker Build Context
+
+**Learning Reference Links:**
+
+* [https://www.geeksforgeeks.org/docker-tutorial/](https://www.geeksforgeeks.org/docker-tutorial/)
+
+---
+
+### **4. Docker Compose**
+
+**Sub-topics:**
+
+* What is Docker Compose?
+* Benefits of Docker Compose
+* Basic Commands in Docker Compose
+* Install Docker Compose
+* Create the Compose file
+* The YAML Configuration file
+
+**Learning Reference Links:**
+
+* [https://www.geeksforgeeks.org/docker-tutorial/](https://www.geeksforgeeks.org/docker-tutorial/)
+
+---
+
+### **5. Docker Engine**
+
+**Sub-topics:**
+
+* What is Docker Engine
+* Docker CLI
+* REST API
+* Docker Daemon
+
+**Learning Reference Links:**
+
+* [https://www.geeksforgeeks.org/docker-tutorial/](https://www.geeksforgeeks.org/docker-tutorial/)
+
+---
+
+### **6. Docker Storage**
+
+**Sub-topics:**
+
+* Storage Drivers
+* Data Volumes
+* Changing the Storage Driver for a Container
+* Creating a Volume
+* Listing all the Volumes
+
+**Learning Reference Links:**
+
+* [https://www.geeksforgeeks.org/docker-tutorial/](https://www.geeksforgeeks.org/docker-tutorial/)
+
+---
+
+### **7. Docker Networking**
+
+**Sub-topics:**
+
+* Default Networks
+* Listing All Docker Networks
+* Inspecting a Docker network
+* Creating Your Own New Network
+
+**Learning Reference Links:**
+
+* [https://www.geeksforgeeks.org/docker-tutorial/](https://www.geeksforgeeks.org/docker-tutorial/)
+
+---
+
+### **8. Container Orchestration**
+
+**Sub-topics:**
+
+* What is container orchestration?
+* Why do we need container orchestration?
+* What are the benefits of container orchestration?
+* What is Kubernetes container orchestration?
+* Container orchestration versus Docker
+
+**Learning Reference Links:**
+
+* [https://www.geeksforgeeks.org/docker-tutorial/](https://www.geeksforgeeks.org/docker-tutorial/)

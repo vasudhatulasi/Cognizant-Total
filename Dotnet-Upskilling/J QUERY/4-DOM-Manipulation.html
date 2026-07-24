@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <h1>DOM Manipulation</h1>
+
+    <input type="text" id="item" placeholder="Enter item">
+    <button id="addBtn">Add</button>
+    <button id="removeBtn">Remove All</button>
+
+    <ul id="list">
+    </ul>
+
+    <script>
+        $("#addBtn").click(function ()
+        {
+            // Get input value
+            let value = $("#item").val();
+
+            // Create new list item
+            $("#list").append("- " + value + "<br>");
+
+            $("#item").val("");
+        });
+
+        $("#removeBtn").click(function ()
+        {
+            // Remove all items
+            $("#list").empty();
+        });
+    </script>
+
+</body>
+</html>

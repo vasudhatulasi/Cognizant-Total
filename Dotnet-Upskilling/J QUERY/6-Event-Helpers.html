@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        #box
+        {
+            width:250px;
+            height:100px;
+            border:1px solid black;
+            padding:20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Event Helpers</h1>
+
+    <div id="box">Move Mouse Here</div>
+
+    <input type="text" id="txt" placeholder="Press a key">
+
+    <script>
+        // Click Event
+        $("#box").click(function ()
+        {
+            $(this).css("background","yellow");
+        });
+
+        // Double Click Event
+        $("#box").dblclick(function ()
+        {
+            $(this).css("background","lightgreen");
+        });
+
+        // Mouse Enter Event
+        $("#box").mouseenter(function ()
+        {
+            $(this).append("Mouse Entered<br>");
+        });
+
+        // Mouse Leave Event
+        $("#box").mouseleave(function ()
+        {
+            $(this).css("background","lightgray");
+        });
+
+        // Key Press Event
+        $("#txt").keypress(function ()
+        {
+            console.log("Key Pressed");
+        });
+    </script>
+
+</body>
+</html>

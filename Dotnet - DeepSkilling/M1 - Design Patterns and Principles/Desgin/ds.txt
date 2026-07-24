@@ -1,0 +1,599 @@
+# Design Patterns in C# (.NET)
+
+## What is a Design Pattern?
+
+A **Design Pattern** is a reusable solution to a commonly occurring software design problem.
+
+Benefits:
+
+* Reusability
+* Scalability
+* Maintainability
+* Loose Coupling
+* Clean Architecture
+
+---
+
+# Types of Design Patterns
+
+## 1. Creational Patterns
+
+**Object Creation**
+
+* Singleton
+* Factory
+* Builder
+
+## 2. Structural Patterns
+
+**Object Composition**
+
+* Adapter
+* Decorator
+* Facade
+
+## 3. Behavioral Patterns
+
+**Object Communication**
+
+* Observer
+* Strategy
+* Command
+
+---
+
+# 1. Singleton Pattern
+
+## Definition
+
+Ensures only one object exists throughout the application.
+
+## Use Cases
+
+* Logger
+* Cache
+* Configuration Manager
+* Database Connection
+
+### C# Example
+
+```csharp
+public sealed class Singleton
+{
+    private static readonly Singleton instance = new Singleton();
+
+    private Singleton()
+    {
+    }
+
+    public static Singleton Instance
+    {
+        get { return instance; }
+    }
+}
+```
+
+Usage:
+
+```csharp
+Singleton s1 = Singleton.Instance;
+Singleton s2 = Singleton.Instance;
+
+Console.WriteLine(s1 == s2);
+```
+
+Output:
+
+```text
+True
+```
+
+### Advantages
+
+✔ Memory Efficient
+
+✔ Single Global Object
+
+### Disadvantages
+
+❌ Difficult Testing
+
+❌ Global State Issues
+
+---
+
+# 2. Factory Pattern
+
+## Definition
+
+Creates objects without exposing creation logic.
+
+### Without Factory
+
+```csharp
+Car car = new Car();
+Bike bike = new Bike();
+```
+
+### C# Example
+
+```csharp
+public interface IVehicle
+{
+    void Drive();
+}
+```
+
+```csharp
+public class Car : IVehicle
+{
+    public void Drive()
+    {
+        Console.WriteLine("Driving Car");
+    }
+}
+```
+
+```csharp
+public class Bike : IVehicle
+{
+    public void Drive()
+    {
+        Console.WriteLine("Driving Bike");
+    }
+}
+```
+
+```csharp
+public class VehicleFactory
+{
+    public static IVehicle GetVehicle(string type)
+    {
+        if (type == "Car")
+            return new Car();
+
+        return new Bike();
+    }
+}
+```
+
+Usage:
+
+```csharp
+IVehicle vehicle =
+VehicleFactory.GetVehicle("Car");
+
+vehicle.Drive();
+```
+
+### Advantages
+
+✔ Loose Coupling
+
+✔ Easy Maintenance
+
+---
+
+# 3. Builder Pattern
+
+## Definition
+
+Constructs complex objects step by step.
+
+### Problem
+
+```csharp
+Student s = new Student(
+    "John",
+    20,
+    "CSE",
+    "India"
+);
+```
+
+Hard to understand.
+
+### Solution
+
+```csharp
+public class Student
+{
+    public string Name;
+    public int Age;
+}
+```
+
+```csharp
+public class StudentBuilder
+{
+    private Student student = new Student();
+
+    public StudentBuilder SetName(string name)
+    {
+        student.Name = name;
+        return this;
+    }
+
+    public StudentBuilder SetAge(int age)
+    {
+        student.Age = age;
+        return this;
+    }
+
+    public Student Build()
+    {
+        return student;
+    }
+}
+```
+
+Usage:
+
+```csharp
+Student student =
+new StudentBuilder()
+.SetName("John")
+.SetAge(20)
+.Build();
+```
+
+### Advantages
+
+✔ Readable Code
+
+✔ Optional Parameters
+
+---
+
+# 4. Adapter Pattern
+
+## Definition
+
+Allows incompatible interfaces to work together.
+
+### Real Example
+
+Indian Charger → US Socket
+
+Need Adapter.
+
+### C# Example
+
+```csharp
+public class OldPrinter
+{
+    public void PrintOld()
+    {
+        Console.WriteLine("Old Printer");
+    }
+}
+```
+
+Expected Interface:
+
+```csharp
+public interface IPrinter
+{
+    void Print();
+}
+```
+
+Adapter:
+
+```csharp
+public class PrinterAdapter : IPrinter
+{
+    private OldPrinter oldPrinter;
+
+    public PrinterAdapter(OldPrinter printer)
+    {
+        oldPrinter = printer;
+    }
+
+    public void Print()
+    {
+        oldPrinter.PrintOld();
+    }
+}
+```
+
+### Advantages
+
+✔ Reuse Legacy Code
+
+✔ Compatibility
+
+---
+
+# 5. Decorator Pattern
+
+## Definition
+
+Adds functionality dynamically.
+
+### Example
+
+Basic Coffee
+
+↓
+
+Coffee + Milk
+
+↓
+
+Coffee + Milk + Sugar
+
+### Structure
+
+```text
+Component
+   ↑
+Decorator
+   ↑
+Concrete Decorator
+```
+
+### C# Example
+
+```csharp
+public interface ICoffee
+{
+    string GetDescription();
+}
+```
+
+```csharp
+public class Coffee : ICoffee
+{
+    public string GetDescription()
+    {
+        return "Coffee";
+    }
+}
+```
+
+```csharp
+public class MilkDecorator : ICoffee
+{
+    private ICoffee coffee;
+
+    public MilkDecorator(ICoffee coffee)
+    {
+        this.coffee = coffee;
+    }
+
+    public string GetDescription()
+    {
+        return coffee.GetDescription() + " + Milk";
+    }
+}
+```
+
+Usage:
+
+```csharp
+ICoffee coffee =
+new MilkDecorator(new Coffee());
+
+Console.WriteLine(coffee.GetDescription());
+```
+
+---
+
+# 6. Observer Pattern
+
+## Definition
+
+One object notifies multiple objects automatically.
+
+### Real Example
+
+YouTube Notifications
+
+```text
+Channel
+ |
+ |---- Subscriber1
+ |---- Subscriber2
+```
+
+### C# Example
+
+```csharp
+public interface IObserver
+{
+    void Update(string message);
+}
+```
+
+```csharp
+public class Subscriber : IObserver
+{
+    public void Update(string message)
+    {
+        Console.WriteLine(message);
+    }
+}
+```
+
+### Uses
+
+* Notifications
+* Events
+* Stock Market Updates
+
+### Advantages
+
+✔ Loose Coupling
+
+✔ Real-Time Updates
+
+---
+
+# 7. Strategy Pattern
+
+## Definition
+
+Choose an algorithm at runtime.
+
+### Example
+
+Google Maps
+
+* Car Route
+* Bike Route
+* Walking Route
+
+### C# Example
+
+```csharp
+public interface IPaymentStrategy
+{
+    void Pay();
+}
+```
+
+```csharp
+public class CardPayment : IPaymentStrategy
+{
+    public void Pay()
+    {
+        Console.WriteLine("Card Payment");
+    }
+}
+```
+
+```csharp
+public class UpiPayment : IPaymentStrategy
+{
+    public void Pay()
+    {
+        Console.WriteLine("UPI Payment");
+    }
+}
+```
+
+Usage:
+
+```csharp
+IPaymentStrategy payment =
+new CardPayment();
+
+payment.Pay();
+```
+
+### Advantages
+
+✔ No Large if-else
+
+✔ Easy Extension
+
+---
+
+# 8. Facade Pattern
+
+## Definition
+
+Provides a simple interface to a complex system.
+
+### Without Facade
+
+```csharp
+cpu.Start();
+ram.Load();
+disk.Read();
+```
+
+### With Facade
+
+```csharp
+computer.Start();
+```
+
+### Benefits
+
+✔ Easy Usage
+
+✔ Hides Complexity
+
+---
+
+# 9. MVC Pattern (ASP.NET MVC)
+
+## Model
+
+```csharp
+public class Student
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+}
+```
+
+## Controller
+
+```csharp
+public class StudentController : Controller
+{
+    public IActionResult Index()
+    {
+        return View();
+    }
+}
+```
+
+## View
+
+```html
+<h1>Students</h1>
+```
+
+Flow:
+
+```text
+User
+ ↓
+Controller
+ ↓
+Model
+ ↓
+View
+```
+
+### Used In
+
+ASP.NET MVC
+
+---
+
+# 10. MVVM Pattern (WPF, MAUI)
+
+## Model
+
+Data Layer
+
+## View
+
+UI Layer
+
+## ViewModel
+
+Middle Layer
+
+Flow:
+
+```text
+View
+ ↕
+ViewModel
+ ↕
+Model
+```
+
+### Used In
+
+* WPF
+* Xamarin
+* .NET MAUI
+
+---

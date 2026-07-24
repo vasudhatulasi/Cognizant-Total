@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        #colorBox
+        {
+            width:200px;
+            height:200px;
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Events Example</h1>
+
+    <button id="colorBtn">Change Color</button>
+
+    <div id="colorBox"></div>
+
+    <script>
+        $("#colorBtn").click(function ()
+        {
+            // Change color to red
+            $("#colorBox").css("background","red");
+        });
+
+        $("#colorBtn").dblclick(function ()
+        {
+            // Change color back to white
+            $("#colorBox").css("background","white");
+        });
+    </script>
+
+</body>
+</html>

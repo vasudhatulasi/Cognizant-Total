@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <h1>jQuery Selectors</h1>
+
+    <h1>Original Heading</h1>
+
+    <p>Paragraph 1</p>
+
+    <p id="p2">Paragraph 2</p>
+
+    <button>Hide Paragraph</button>
+
+    <script>
+        $(document).ready(function ()
+        {
+            // Change heading text
+            $("h1").text("New Heading");
+
+            $("button").click(function ()
+            {
+                // Hide second paragraph
+                $("#p2").hide();
+            });
+        });
+    </script>
+
+</body>
+</html>

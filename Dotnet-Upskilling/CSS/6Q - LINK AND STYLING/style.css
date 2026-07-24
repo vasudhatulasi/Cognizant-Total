@@ -1,0 +1,34 @@
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: rgb(212, 84, 212);
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: green;
+}
+
+.nav-menu {
+    list-style-type: none;
+}
+
+.nav-menu li {
+    padding: 10px;
+    margin: 5px;
+}
+
+.event-list {
+    list-style-type: square;
+    list-style-position: inside;
+}
+
+.event-list li {
+    padding: 8px;
+    margin: 4px;
+}

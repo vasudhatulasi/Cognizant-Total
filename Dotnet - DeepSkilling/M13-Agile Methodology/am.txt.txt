@@ -1,0 +1,362 @@
+
+
+# ?? Module 13 – Agile Methodology 
+---
+
+## ?? Overview
+
+This module provides a comprehensive understanding of **Agile methodology**, focusing on its:
+
+* Core principles and values
+* Agile Manifesto
+* Scrum framework
+* Estimation and planning techniques
+* User story creation
+
+Agile promotes:
+
+* **Iterative development**
+* **Collaboration**
+* **Continuous delivery of value**
+
+It contrasts with traditional models like **Waterfall**, emphasizing flexibility and adaptability.
+
+---
+
+## ?? Learning Objectives
+
+After completing this module, you will be able to:
+
+* Explain Agile principles, values, and the Agile Manifesto
+* Differentiate between **Agile vs Waterfall models**
+* Understand Scrum roles, ceremonies, and artifacts
+* Apply estimation techniques (Story Points, Planning Poker)
+* Interpret velocity and burndown charts
+* Understand sprint planning and iterative delivery
+* Write effective user stories using **INVEST principle**
+* Define acceptance criteria using **Given-When-Then format**
+* Collaborate effectively in Agile teams
+
+---
+
+## ?? Key Concepts Explained
+
+---
+
+### ?? 1. Agile Methodology
+
+Agile is a software development approach based on:
+
+* Iterative progress
+* Customer collaboration
+* Continuous feedback
+
+---
+
+### ?? 2. Agile Manifesto
+
+**4 Core Values:**
+
+* Individuals & interactions over processes & tools
+* Working software over documentation
+* Customer collaboration over contract negotiation
+* Responding to change over following a plan
+
+**12 Principles:**
+Focus on customer satisfaction, frequent delivery, simplicity, and adaptability.
+
+---
+
+### ?? 3. Agile vs Waterfall
+
+| Agile               | Waterfall        |
+| ------------------- | ---------------- |
+| Iterative           | Sequential       |
+| Flexible            | Rigid            |
+| Continuous feedback | Minimal feedback |
+| Fast delivery       | Late delivery    |
+
+---
+
+### ?? 4. Scrum Framework
+
+#### ? Roles
+
+* **Scrum Master** ? Facilitator
+* **Product Owner** ? Defines requirements
+* **Development Team** ? Builds product
+
+---
+
+#### ? Ceremonies
+
+* Sprint Planning
+* Daily Scrum
+* Sprint Review
+* Sprint Retrospective
+
+---
+
+#### ? Artifacts
+
+* Product Backlog
+* Sprint Backlog
+* Increment
+* Definition of Done
+
+---
+
+### ?? 5. Agile Estimation & Planning
+
+#### ? Story Points
+
+* Measure effort (not time)
+* Based on complexity
+
+---
+
+#### ? Planning Poker
+
+* Team-based estimation technique
+* Uses cards (e.g., Fibonacci sequence)
+
+---
+
+#### ? Velocity
+
+* Work completed per sprint
+
+---
+
+#### ? Burndown Chart
+
+* Shows remaining work vs time
+
+---
+
+### ?? 6. Agile User Stories
+
+#### ? Format:
+
+```
+As a [user], I want [goal], so that [benefit]
+```
+
+---
+
+#### ? INVEST Principle:
+
+* **I**ndependent
+* **N**egotiable
+* **V**aluable
+* **E**stimable
+* **S**mall
+* **T**estable
+
+---
+
+#### ? Acceptance Criteria
+
+Defined using:
+
+```
+Given [condition]
+When [action]
+Then [result]
+```
+
+---
+
+## ?? Self-Learning Topics
+
+* Agile principles and manifesto
+* Scrum framework deep dive
+* Estimation techniques
+* User story writing practice
+
+---
+
+## ?? Best Practices
+
+* Deliver in small increments
+* Encourage team collaboration
+* Accept changing requirements
+* Focus on customer value
+
+---
+
+## ?? Summary
+
+Agile methodology enables teams to:
+
+* Adapt quickly
+* Deliver continuously
+* Improve collaboration
+* Build high-quality software
+
+---
+
+# ?? Module 14 – Gen AI Fundamentals (Detailed README)
+
+---
+
+## ?? Overview
+
+This module introduces **Generative AI (Gen AI)** and its application in software development using tools like **GitHub Copilot**.
+
+It covers:
+
+* AI fundamentals
+* Prompt engineering
+* Ethical considerations
+* Real-world applications
+
+Learners gain hands-on experience in using AI tools to:
+
+* Generate code
+* Write documentation
+* Create test cases
+
+---
+
+## ?? Learning Objectives
+
+After completing this module, you will be able to:
+
+* Explain fundamentals and evolution of Generative AI
+* Differentiate between traditional AI and Generative AI
+* Apply prompt engineering techniques:
+
+  * Zero-shot
+  * Few-shot
+  * Chain-of-thought
+* Follow best practices for AI usage
+* Understand GitHub Copilot features
+* Set up Copilot in development environment
+* Generate code, documentation, and test cases
+
+---
+
+## ?? Key Concepts Explained
+
+---
+
+### ?? 1. Generative AI
+
+Generative AI refers to AI systems that can:
+
+* Generate text
+* Produce code
+* Create images or content
+
+Examples:
+
+* Chatbots
+* Code assistants
+* Content generators
+
+---
+
+### ?? 2. Traditional AI vs Generative AI
+
+| Traditional AI          | Generative AI        |
+| ----------------------- | -------------------- |
+| Rule-based / predictive | Content creation     |
+| Classification tasks    | Text/code generation |
+| Fixed outputs           | Dynamic outputs      |
+
+---
+
+### ?? 3. Prompt Engineering
+
+Designing effective inputs to get desired AI outputs.
+
+#### ? Techniques:
+
+* **Zero-shot** ? No examples
+* **Few-shot** ? Provide examples
+* **Chain-of-thought** ? Step-by-step reasoning
+
+---
+
+### ?? 4. GitHub Copilot
+
+AI-powered coding assistant.
+
+#### ? Features:
+
+* Code auto-completion
+* Suggests functions and logic
+* Generates boilerplate code
+
+---
+
+#### ? Setup Steps:
+
+1. Install Copilot extension
+2. Login with GitHub
+3. Enable in IDE (VS Code)
+
+---
+
+### ?? 5. AI Best Practices
+
+* Write clear prompts
+* Validate AI-generated code
+* Avoid sensitive data sharing
+* Ensure ethical usage
+
+---
+
+### ?? 6. Ethical Considerations
+
+* Bias in AI models
+* Data privacy
+* Responsible AI usage
+
+---
+
+### ?? 7. Practical Applications
+
+* Code generation
+* Documentation writing
+* Test case creation
+* Debugging assistance
+
+---
+
+## ?? Self-Learning Topics
+
+* Prompt engineering practice
+* Copilot usage in projects
+* Ethical AI guidelines
+* Real-world Gen AI applications
+
+---
+
+## ?? Best Practices
+
+* Always review AI output
+* Use AI as assistance, not replacement
+* Combine human logic with AI suggestions
+
+---
+
+## ?? Summary
+
+Generative AI is transforming software development by:
+
+* Increasing productivity
+* Automating repetitive tasks
+* Assisting developers with intelligent suggestions
+
+---
+
+## ?? Final Note
+
+Mastering **Agile + Gen AI** together gives you:
+? Better project execution
+? Faster development
+? Smarter coding workflows
+
+---

@@ -1,0 +1,159 @@
+
+
+---
+
+# **Module 14 – Gen AI Fundamentals**
+
+## **Overview:**
+
+This module introduces the fundamentals of Generative AI along with practical usage of GitHub Copilot as an AI-powered coding assistant. It covers key concepts such as prompt engineering techniques, ethical considerations, and real-world applications of Gen AI in software development. Learners will gain hands-on experience in setting up Copilot, leveraging its core features, and understanding the responsibilities and risks associated with AI-assisted coding.
+
+---
+
+## **Learning Objectives:**
+
+After completing this module, learners will be able to:
+
+* Explain the fundamentals, evolution, and applications of Generative AI
+* Differentiate between generative AI and traditional AI approaches
+* Apply prompt engineering techniques (zero-shot, few-shot, chain-of-thought) effectively
+* Follow best practices and ethical guidelines for prompt design and AI usage
+* Describe GitHub Copilot features, working principles, and supported environments
+* Set up and configure GitHub Copilot in a development environment
+* Use Copilot to generate code, documentation, and test cases efficiently
+* Refactor and optimize code using AI-assisted suggestions
+* Identify risks related to AI-generated code including security, licensing, and privacy concerns
+* Apply responsible and secure practices while using AI coding tools
+
+---
+
+## **Self-Learning (Open-source links):**
+
+### **Skill Spring Recommended Course:**
+
+* Course Name: Prompt Engineering Foundation [101-BASIC]
+* Course Name: GitHub Copilot Foundation Virtual Training Course
+
+---
+
+## **Key Topics**
+
+### **1. Introduction to Generative AI**
+
+**Sub-topics:**
+
+* What is Generative AI?
+* How GenAI differs from traditional (discriminative) AI
+* Overview of GenAI applications:
+  text generation, code completion, image creation, chatbots
+* History and evolution of Generative AI:
+
+  * Early chatbots (1960s) ?
+  * GANs (2014) ?
+  * GPT-3 (2020) ?
+  * ChatGPT (2022) ?
+  * GitHub Copilot and beyond
+
+**Learning Reference Links:**
+
+* [https://www.geeksforgeeks.org/artificial-intelligence/what-is-generative-ai/](https://www.geeksforgeeks.org/artificial-intelligence/what-is-generative-ai/)
+* [https://www.geeksforgeeks.org/what-is-generative-ai/](https://www.geeksforgeeks.org/what-is-generative-ai/)
+* [https://businessmanagementblog.com/history-of-generative-ai/](https://businessmanagementblog.com/history-of-generative-ai/)
+
+---
+
+### **2. Prompt Engineering – Techniques, Best Practices & Ethics**
+
+**Sub-topics:**
+
+* What is Prompt Engineering and why it matters for developers
+* Prompting Techniques:
+
+  * Zero-shot prompting – direct task without examples
+  * Few-shot prompting – giving examples to guide the model
+  * Chain-of-thought prompting – asking model to reason step by step
+* Best practices: clear instructions, provide context, specify output format, iterate
+* Ethical considerations: avoiding bias in prompts, accuracy, privacy, responsible AI usage
+* Hands-on: writing coding-task prompts (e.g., "Write a C# method that…")
+
+**Learning Reference Links:**
+
+* [https://www.geeksforgeeks.org/what-is-an-ai-prompt-engineering/](https://www.geeksforgeeks.org/what-is-an-ai-prompt-engineering/)
+* [https://www.geeksforgeeks.org/blogs/prompt-engineering-best-practices/](https://www.geeksforgeeks.org/blogs/prompt-engineering-best-practices/)
+* [https://www.promptingguide.ai/](https://www.promptingguide.ai/)
+* [https://www.codecademy.com/article/prompt-engineering-101-understanding-zero-shot-one-shot-and-few-shot](https://www.codecademy.com/article/prompt-engineering-101-understanding-zero-shot-one-shot-and-few-shot)
+* [https://www.tutorialspoint.com/prompt_engineering/prompt_engineering_ethical_considerations.htm](https://www.tutorialspoint.com/prompt_engineering/prompt_engineering_ethical_considerations.htm)
+
+---
+
+### **3. Introduction to GitHub Copilot**
+
+**Sub-topics:**
+
+* What is GitHub Copilot?
+* Overview of GitHub Copilot features
+* How Copilot works (AI pair programmer powered by OpenAI Codex)
+* Supported IDEs and languages
+
+**Learning Reference Links:**
+
+* [https://www.geeksforgeeks.org/git/github-copilot/](https://www.geeksforgeeks.org/git/github-copilot/)
+* [https://www.freecodecamp.org/news/how-to-use-github-copilot-with-visual-studio-code/](https://www.freecodecamp.org/news/how-to-use-github-copilot-with-visual-studio-code/)
+
+---
+
+### **4. Setup and Configuration**
+
+**Sub-topics:**
+
+* Installing GitHub Copilot extension in VS Code
+* Connecting to a GitHub account
+* Beginner-friendly first coding task with Copilot
+
+**Learning Reference Links:**
+
+* [https://www.freecodecamp.org/news/how-to-use-github-copilot-with-visual-studio-code/](https://www.freecodecamp.org/news/how-to-use-github-copilot-with-visual-studio-code/)
+* [https://www.geeksforgeeks.org/git/github-copilot/](https://www.geeksforgeeks.org/git/github-copilot/)
+
+---
+
+### **5. Core Features and Capabilities**
+
+**Sub-topics:**
+
+* Code suggestions and completions (Tab to accept)
+* Writing functions and boilerplate code from comments
+* Generating comments and documentation automatically
+* Refactoring and optimizing existing code
+* Creating test cases with Copilot
+
+**Learning Reference Links:**
+
+* [https://www.geeksforgeeks.org/git/github-copilot/](https://www.geeksforgeeks.org/git/github-copilot/)
+* [https://www.freecodecamp.org/news/how-to-use-github-copilot-with-visual-studio-code/](https://www.freecodecamp.org/news/how-to-use-github-copilot-with-visual-studio-code/)
+
+---
+
+### **6. Security and Ethical Considerations**
+
+**Sub-topics:**
+
+* Understanding AI-generated code risks (vulnerabilities, hallucinations)
+* Licensing and attribution concerns (copyleft risk)
+* Data privacy and usage policies (what code is sent to GitHub servers)
+* Responsible use of Copilot – best practices
+
+**Learning Reference Links:**
+
+* [https://blog.gitguardian.com/github-copilot-security-and-privacy/](https://blog.gitguardian.com/github-copilot-security-and-privacy/)
+* [https://www.geeksforgeeks.org/git/github-copilot/](https://www.geeksforgeeks.org/git/github-copilot/)
+* [https://docs.github.com/en/copilot/responsible-use/code-review](https://docs.github.com/en/copilot/responsible-use/code-review)
+
+---
+
+## **Check your understanding:**
+
+* [https://www.mygreatlearning.com/blog/generative-ai-quiz/](https://www.mygreatlearning.com/blog/generative-ai-quiz/)
+* [https://ai.toolsnote.com/quiz-prompt-engineering-mcq/](https://ai.toolsnote.com/quiz-prompt-engineering-mcq/)
+* [https://technicalblog.in/languagewise-mcqs/prompt-engineering-mcqs/](https://technicalblog.in/languagewise-mcqs/prompt-engineering-mcqs/)
+* [https://examland.com/free-practice-test/github-copilot/](https://examland.com/free-practice-test/github-copilot/)

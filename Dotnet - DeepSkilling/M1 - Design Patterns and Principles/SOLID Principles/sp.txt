@@ -1,0 +1,188 @@
+SOLID is a set of 5 Object-Oriented Design Principles introduced by Robert C. Martin to make software maintainable, scalable, flexible, and easy to test.
+
+S – Single Responsibility Principle (SRP)
+Definition
+
+A class should have only one responsibility and one reason to change.
+
+Example
+
+❌ Bad
+
+class Employee {
+    void calculateSalary() {}
+    void saveToDatabase() {}
+    void generateReport() {}
+}
+
+This class handles salary, database, and reporting.
+
+✅ Good
+
+class Employee {}
+
+class SalaryCalculator {}
+class EmployeeRepository {}
+class ReportGenerator {}
+
+Each class has one job.
+
+Benefits
+Easier testing
+Easier maintenance
+Less coupling
+O – Open/Closed Principle (OCP)
+Definition
+
+Software entities should be open for extension but closed for modification.
+
+Example
+
+❌ Bad
+
+class Payment {
+    void pay(String type){
+        if(type.equals("UPI")){}
+        else if(type.equals("Card")){}
+    }
+}
+
+Every new payment method requires modifying existing code.
+
+✅ Good
+
+interface PaymentMethod{
+    void pay();
+}
+
+class UPI implements PaymentMethod{
+    public void pay(){}
+}
+
+class Card implements PaymentMethod{
+    public void pay(){}
+}
+
+Add new classes without changing old code.
+
+Benefits
+Reduces bugs
+Easy feature addition
+L – Liskov Substitution Principle (LSP)
+Definition
+
+A child class should be able to replace its parent class without affecting program correctness.
+
+Example
+
+❌ Bad
+
+class Bird{
+    void fly(){}
+}
+
+class Penguin extends Bird{
+    void fly(){
+        throw new RuntimeException();
+    }
+}
+
+Penguin cannot fly.
+
+✅ Good
+
+class Bird {}
+
+interface Flyable{
+    void fly();
+}
+
+class Sparrow extends Bird implements Flyable{
+    public void fly(){}
+}
+
+class Penguin extends Bird{}
+Benefits
+Proper inheritance
+Avoids unexpected behavior
+I – Interface Segregation Principle (ISP)
+Definition
+
+Clients should not be forced to implement methods they do not use.
+
+Example
+
+❌ Bad
+
+interface Worker{
+    void work();
+    void eat();
+}
+
+class Robot implements Worker{
+    public void work(){}
+    public void eat(){}
+}
+
+Robot doesn't eat.
+
+✅ Good
+
+interface Workable{
+    void work();
+}
+
+interface Eatable{
+    void eat();
+}
+
+class Human implements Workable,Eatable{}
+
+class Robot implements Workable{}
+Benefits
+Small interfaces
+Cleaner code
+D – Dependency Inversion Principle (DIP)
+Definition
+
+High-level modules should depend on abstractions (interfaces), not concrete implementations.
+
+Example
+
+❌ Bad
+
+class MySQLDatabase{}
+
+class Application{
+    MySQLDatabase db = new MySQLDatabase();
+}
+
+Application is tightly coupled to MySQL.
+
+✅ Good
+
+interface Database{}
+
+class MySQLDatabase implements Database{}
+
+class Application{
+    Database db;
+
+    Application(Database db){
+        this.db = db;
+    }
+}
+
+Now we can switch to MongoDB easily.
+
+Benefits
+Loose coupling
+Easy testing
+Easy replacement of dependencies
+Interview One-Liners
+Principle	One-Line Definition
+SRP	One class should have one responsibility
+OCP	Extend behavior without modifying existing code
+LSP	Child class should replace parent without breaking functionality
+ISP	Create small, focused interfaces
+DIP	Depend on abstractions, not implementations
